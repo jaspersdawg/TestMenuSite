@@ -8,14 +8,14 @@ fetch('recipes.json')
     function showCategories() {
       recipesDiv.innerHTML = '';
       detailDiv.innerHTML = '';
+      categoriesDiv.style.display = "grid";
     }
 
-   Object.keys(data).forEach(category => {
+    Object.keys(data).forEach(category => {
 
-  // Skip empty categories
-  if (!data[category] || data[category].length === 0) {
-    return;
-  }
+      if (!data[category] || data[category].length === 0) {
+        return;
+      }
 
       const btn = document.createElement('button');
       btn.textContent = category;
@@ -23,9 +23,15 @@ fetch('recipes.json')
       btn.onclick = () => {
         recipesDiv.innerHTML = '';
         detailDiv.innerHTML = '';
+        categoriesDiv.style.display = "none";
+
+        const header = document.createElement('h2');
+        header.textContent = category;
+        recipesDiv.appendChild(header);
 
         const backBtn = document.createElement('button');
         backBtn.textContent = "← Back to Categories";
+        backBtn.style.marginBottom = "20px";
         backBtn.onclick = showCategories;
         recipesDiv.appendChild(backBtn);
 
