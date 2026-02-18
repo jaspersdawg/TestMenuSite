@@ -27,7 +27,9 @@ fetch('recipes.json')
 
         const header = document.createElement('h2');
         header.textContent = category;
+        header.classList.add("fade-in");
         recipesDiv.appendChild(header);
+
 
         const backBtn = document.createElement('button');
         backBtn.textContent = "← Back to Categories";
@@ -54,6 +56,7 @@ fetch('recipes.json')
             `;
           };
 
+          card.classList.add("fade-in");
           recipesDiv.appendChild(card);
         });
       };
