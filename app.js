@@ -10,7 +10,13 @@ fetch('recipes.json')
       detailDiv.innerHTML = '';
     }
 
-    Object.keys(data).forEach(category => {
+   Object.keys(data).forEach(category => {
+
+  // Skip empty categories
+  if (!data[category] || data[category].length === 0) {
+    return;
+  }
+
       const btn = document.createElement('button');
       btn.textContent = category;
 
