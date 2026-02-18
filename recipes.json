@@ -1,4 +1,17 @@
 {
+  "American Comfort": [],
+  "Chinese / Asian Fusion": [
+    {
+      "name": "Shrimp Egg Foo Young",
+      "light": "green",
+      "tags": "↔️🌾 | 💪HP | LC",
+      "description": "Bean sprouts, onion, sesame, brown gravy",
+      "details": "Full egg foo young recipe details will go here."
+    }
+  ],
+  "Desserts": [],
+  "Dutch Oven Meals": [],
+  "Instant Pot / Pressure Cooker": [],
   "Italian": [
     {
       "name": "Joshua’s Family Sausage & Beef Ragù",
@@ -8,13 +21,9 @@
       "details": "Full ragù recipe details will go here."
     }
   ],
-  "Chinese / Asian Fusion": [
-    {
-      "name": "Shrimp Egg Foo Young",
-      "light": "green",
-      "tags": "↔️🌾 | 💪HP | LC",
-      "description": "Bean sprouts, onion, sesame, brown gravy",
-      "details": "Full egg foo young recipe details will go here."
-    }
-  ]
-}
+  "Korean": [],
+  "Low-Carb BBQ": [],
+  "Mexican / Tex-Mex": [],
+  "Middle Eastern / Mediterranean": [],
+  "One Sheet Pan Meals": [],
+  "Pantry / Budget Builds": [],
