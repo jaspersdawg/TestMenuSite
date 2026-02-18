@@ -5,6 +5,11 @@ fetch('recipes.json')
     const recipesDiv = document.getElementById('recipes');
     const detailDiv = document.getElementById('recipeDetail');
 
+    function showCategories() {
+      recipesDiv.innerHTML = '';
+      detailDiv.innerHTML = '';
+    }
+
     Object.keys(data).forEach(category => {
       const btn = document.createElement('button');
       btn.textContent = category;
@@ -12,6 +17,11 @@ fetch('recipes.json')
       btn.onclick = () => {
         recipesDiv.innerHTML = '';
         detailDiv.innerHTML = '';
+
+        const backBtn = document.createElement('button');
+        backBtn.textContent = "← Back to Categories";
+        backBtn.onclick = showCategories;
+        recipesDiv.appendChild(backBtn);
 
         data[category].forEach(recipe => {
           const card = document.createElement('div');
